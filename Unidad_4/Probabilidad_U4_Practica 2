@@ -1,0 +1,115 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO8qnR2kXEWtpuhplF7q4p7",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/everlop12/Probabilidad/blob/main/Unidad_4/Probabilidad_U4_Practica%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "![image](https://github.com/Jose-Gabriel-Rodriguez/Probabilidad/blob/main/Cintilla2025.png?raw=true)\n",
+        "\n",
+        "# **Probabilidad Y Estadistica**\n",
+        "\n",
+        "## **Unidad 4**\n",
+        "\n",
+        "### **Probabilidad_U4_Practica 2.**\n",
+        "\n",
+        "### Docente: *Dr. Jose Gabriel Rodriguez Rivas*\n",
+        "\n",
+        "### Alumno: Ever Ismael Quiñonez Lopez"
+      ],
+      "metadata": {
+        "id": "yideNpWkUfSD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from scipy.stats import binom\n",
+        "\n",
+        "#Parametros de la distribucion binomial\n",
+        "probabilidad_exito = 0.83\n",
+        "num_pacientes = 16\n",
+        "X = 16 #Numero De Exitos\n",
+        "\n",
+        "#Calcular la probabilidad de que ningun paciente sufra la enfermedad\n",
+        "probabilidad_ningun_enfermo = binom.pmf( X, num_pacientes, probabilidad_exito)\n",
+        "\n",
+        "print(\"La probabilidad de que ningun paciente sufra la enfermedad es: \", probabilidad_ningun_enfermo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "x6RSkz61Ufiz",
+        "outputId": "dbdbc18f-e42a-4807-b804-a6125a7bb60e"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "La probabilidad de que ningun paciente sufra la enfermedad es:  0.0507282029895386\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from scipy.stats import binom\n",
+        "\n",
+        "#Parametros de la distribucion binomial\n",
+        "probabilidad_exito = 0.83\n",
+        "num_pacientes = 16\n",
+        "X = 0 #Numero De Exitos\n",
+        "\n",
+        "#Calcular la probabilidad de que ningun paciente sufra la enfermedad\n",
+        "probabilidad_todos_enfermos = binom.pmf( X, num_pacientes, probabilidad_exito)\n",
+        "\n",
+        "print(\"La probabilidad de que todos los paciente sufran la enfermedad es: \", probabilidad_todos_enfermos)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WypIQ-TMVdhE",
+        "outputId": "af3ac705-f5e5-4f5d-bf5f-5ec22bef9f67"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "La probabilidad de que todos los paciente sufran la enfermedad es:  4.866119187566701e-13\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
